@@ -25,11 +25,18 @@ document.addEventListener('DOMContentLoaded', function () {
         fullScreenLogo.style.transition = 'top 0.5s, left 0.5s, width 0.5s, height 0.5s';
 
         // Trigger the transition
-        setTimeout(() => {
-            fullScreenLogo.style.top = '26%'; // Corrected value
-            fullScreenLogo.style.left = '3%'; // Corrected value
-            fullScreenLogo.style.width = '100px'; // Adjust as needed
-            fullScreenLogo.style.height = '100px'; // Adjust as needed
+     setTimeout(() => {
+            if (window.innerWidth <= 768) {
+                fullScreenLogo.style.top = '31%' ;
+                fullScreenLogo.style.left = '7%';
+                fullScreenLogo.style.width = '55px';
+                fullScreenLogo.style.height = '100px';
+            } else {
+                fullScreenLogo.style.top = '26%'; // Corrected value
+                fullScreenLogo.style.left = '3%'; // Corrected value
+                fullScreenLogo.style.width = '100px'; // Adjust as needed
+                fullScreenLogo.style.height = '100px'; // Adjust as needed
+            }
         }, 0);
 
         // Hide the navbar logo temporarily during the transition
@@ -37,10 +44,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // After the transition, reset styles and show the navbar logo
         setTimeout(() => {
-            fullScreenLogo.style.transition = '';
+            fullScreenLogo.style.transition = '2s';
             // fullScreenLogo.style.display = 'none';
             navbarLogo.style.opacity = '1';
-        }, 5000); // Adjust the duration based on your CSS transition
+        }, 7000); // Adjust the duration based on your CSS transition
     });
 });
 
@@ -73,18 +80,7 @@ var swiper = new Swiper(".mySwiper", {
           }
         },
         slideChange: function () {
-          // var activeIndex = this.activeIndex;
 
-          // // Select the corresponding product description by ID
-          // var productDescription = document.getElementById(`Pina-Colada-${activeIndex}`);
-          // if (productDescription) {
-          //   // Scroll to the corresponding product description
-          //   productDescription.scrollIntoView({ behavior: 'smooth' });
-          // }
-
-          // document.querySelectorAll('.swiper-slide').forEach(function (slide) {
-          //   slide.classList.remove('swiper-slide-next', 'swiper-slide-prev');
-          // });
           var activeIndex = this.activeIndex;
 
           // Find the corresponding product description element
@@ -115,8 +111,27 @@ var swiper = new Swiper(".mySwiper", {
           // Add classes to identify the next and previous slides
           document.querySelector('.swiper-slide-next').classList.add('swiper-slide-next');
           document.querySelector('.swiper-slide-prev').classList.add('swiper-slide-prev');
+
+          var activeIndex = this.activeIndex;
+          var productCard = document.querySelectorAll('.products-card')[activeIndex];
+          productCard.classList.remove('slide-top');
+          productCard.classList.add('slide-bottom');
         },
       
       },
   });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.getElementById('menu-icon');
+    const listSection = document.querySelector('.list-section .list-group-nav-ul');
+
+    console.log(menuIcon, listSection); // Check if these elements are correctly selected
+
+    menuIcon.addEventListener('click', function () {
+        console.log('Menu icon clicked'); // Check if the click event is being triggered
+        listSection.classList.toggle('active');
+    });
+});
+
 
