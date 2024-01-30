@@ -1,0 +1,601 @@
+@import url(../Fonts/transfonter.org-20231027-125649/stylesheet.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --theme-color: #CA4654;
+}
+
+body {
+    font-family: "DIN Next LT Pro";
+    min-height: 100%;
+
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.loging-section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/hotshotbgred.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    z-index: -1;
+}
+
+.loging-card {
+    width: 466px;
+    height: 433px;
+    background: var(--white);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 50%;
+    right: 28%;
+    transform: translate(-100%, -50%);
+    padding: 10px 20px;
+
+    .logo-box {
+        text-align: center;
+        padding: 10px;
+
+        & img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .form-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 30px;
+        padding: 20px 50px;
+        margin-top: 35px;
+
+        .form-box {
+            text-align: center;
+
+            .main-title {
+                color: var(--theme-color);
+                font-family: "DIN Next LT Pro";
+                font-size: 16.132px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+
+            .input-box {
+                border: 1px solid var(--theme-color);
+                background: #FFF;
+                width: 100%;
+                text-align: center;
+                -webkit-appearance: none;
+                appearance: none;
+                padding: 5px 5px;
+
+                &::placeholder {
+                    color: var(--theme-color);
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .btn-box {
+        text-align: center;
+        margin-top: 40px;
+
+        .btn-enter {
+            border: none;
+            padding: 5px 20px;
+            text-align: center;
+            color: var(--white);
+            font-family: "DIN Next LT Pro";
+            font-size: 16.132px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: capitalize;
+            background-color: var(--theme-color);
+        }
+    }
+
+    .end-text {
+        color: var(--theme-color);
+        font-family: "DIN Next LT Pro";
+        font-size: 14.132px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-top: 20%;
+    }
+}
+
+.custom-container {
+    /* max-width: 100%; */
+    margin-inline: auto;
+}
+
+.navbar-home-section {
+
+    position: relative;
+    padding: 100px 50px 50px 50px ;
+
+    .list-section {
+        padding-left: 150px;
+        border-bottom: 5px solid var(--theme-color);
+        width: 100%;
+
+        .list-group-nav-ul {
+            display: flex;
+            align-items: center;
+            padding: 5px 20px;
+            flex-wrap: wrap;
+            .nav-item {
+                margin-inline: 40px;
+
+                .nav-link {
+                    color: #CA4654;
+                    font-family: "DIN Next LT Pro";
+                    font-size: 19.388px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+.navbar-section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 100px 75px 50px 64px;
+    .nav-img-box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background:var(--white);
+        top: 26%;
+        left: 4%;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .list-section {
+        padding-left: 150px;
+        border-bottom: 5px solid var(--theme-color);
+        width: 100%;
+
+        .list-group-nav-ul {
+            display: flex;
+            align-items: center;
+            padding: 5px 20px;
+            flex-wrap: wrap;
+            .nav-item {
+                margin-inline: 40px;
+
+                .nav-link {
+                    color: #CA4654;
+                    font-family: "DIN Next LT Pro";
+                    font-size: 19.388px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+.full-screen-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 9999;
+    height: 100vh;
+    cursor: auto;
+
+    .logo-img {
+        cursor: pointer;
+        width: 500px;
+        transition: opacity 0.5s ease-in-out;
+        z-index: 0;
+    }
+
+    .bg-red-hot-white-box {
+        background-color: var(--theme-color);
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+
+        .hot-white-img {
+            cursor: pointer;
+            width: 500px;
+            transition: opacity 0.5s ease-in-out;
+        }
+    }
+
+    &:hover {
+        .logo-img {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .bg-red-hot-white-box {
+            opacity: 0;
+            background-color: none;
+        }
+    }
+
+    .hot-white-img:hover {
+        .hot-white-img {
+            opacity: 1;
+        }
+
+        .logo-img {
+            opacity: 0;
+        }
+    }
+}
+
+
+.hot-white-img:hover .bg-red-hot-white-box {
+    background-color: #FFF;
+}
+
+
+
+.two-img-set-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+
+    .hot-white {
+        position: absolute;
+        background-color: var(--theme-color);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .hot-white-img {
+            cursor: pointer;
+            width: 500px;
+        }
+    }
+
+    .hot-red {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo-img {
+            cursor: pointer;
+            width: 500px;
+        }
+    }
+}
+
+
+/* -------------- home page section start ---------------- */
+.home-container-box {
+    .main-head-title {
+        color: var(--black);
+        font-family: "DIN Next LT Pro";
+        font-size: 80.625px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .sub-text {
+        color: #CA4654;
+        font-family: "DIN Next LT Pro";
+        font-size: 17.284px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 191.3%;
+        /* 36.891px */
+        text-transform: uppercase;
+    }
+}
+
+/* -------------- home page section End ---------------------- */
+
+.contact-us-section {
+    .contact-us-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        .main-text {
+            color: var(--theme-color);
+            font-family: "DIN Next LT Pro";
+            font-size: 52.884px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+}
+
+/* ------------- footer section start ---------- */
+.bg-theme-color {
+    background-color: var(--theme-color);
+}
+
+.footer-section {
+    margin-top: auto;
+    padding: 50px 0px;
+
+    .footer-logo {
+        width: 50px;
+    }
+
+    .footer-text {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        /* 166.667% */
+        letter-spacing: 0.48px;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .insta-logo {
+        width: 35px;
+    }
+
+    .footer-copyright-text {
+        text-align: end;
+        color: #FFF;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        /* 166.667% */
+        letter-spacing: 0.48px;
+        text-transform: lowercase;
+        margin-bottom: 0;
+    }
+}
+
+/* --------------- footer section End ------------ */
+
+.custom-container-product{
+        margin-inline: auto;
+}
+.products-section{
+    height: 80vh;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .img-box{
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline:auto ;
+        & img{
+            width: 100%;
+        }
+    }
+  }
+
+  .swiper-slide-active{
+    /* background-color: #FFF; */
+    transition: all 0.5s ease-in-out;
+    .img-box{
+        width: 500px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline:auto ;
+        transition: all 2s ease-out !important;
+        transition-duration: 1s;
+        transition-delay: 1s;
+        & img{
+            width: 100%;
+        }
+    }
+}
+.swiper-slide-next, .swiper-slide-prev {
+    /* Animation when slide leaves */
+    .img-box {
+      width: 200px !important;
+      transition: all 2s ease-out !important;
+      transition-duration: 1s;
+      transition-delay: 1s;
+    }
+}
+.products-card.active {
+    opacity: 1; 
+}
+.products-description-box{
+    /* border: 1px solid black; */
+    width: min(100% - 0px , 500px);
+    margin-inline: auto;
+    height: 130px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    transition: opacity 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+
+    .products-card.active {
+        display: block; /* Show the active product card */
+        margin-top: 100px;
+        transition: all 0.5s ease-in-out;
+        
+            -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+             animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        
+    }
+    .products-card{
+        text-align: center;
+        height: 150px;
+        display: none;
+        transition: opacity 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        .main-title{
+            color: var(--white);
+            font-family: "DIN Next LT Pro";
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        .sub-text{
+            color: #FFF;
+            text-align: center;
+            font-family: "DIN Next LT Pro";
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .swiper-slide-active{
+        .img-box{
+            width: 350px !important;
+        }
+    }
+    
+}
+@media (max-width:600px) {
+    .products-section{
+        height: 20vh;
+    }
+    .swiper-slide .img-box{
+        width: 90px !important;
+    }
+    .swiper-slide-active .img-box {
+        width: 130px !important;
+}
+}
+@media(max-width:991px) and (min-width:600px) {
+    .swiper-slide-active{
+        .img-box{
+            width: 300px !important;
+        }
+    }
+}
+@media (max-width:991px) {
+    .loging-card {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .custom-container-product {
+        max-width: 1320px;
+    
+    }
+}
+
+/* @media (min-width: 1200px){
+
+    .custom-container {
+        max-width: 1140px ;
+    }
+} */
+@-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+  }
