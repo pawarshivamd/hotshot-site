@@ -396,7 +396,7 @@ input[type=number] {
     padding: 50px 0px;
 
     .footer-logo {
-        width: 50px;
+        width: 90px;
     }
 
     .footer-text {
@@ -696,17 +696,17 @@ input[type=number] {
     .contact-us-section .contact-us-box {
         height: 34vh !important;
     }
+    .footer-section .footer-logo {
+        width: 70px;
+    }
 }
-@media (max-width: 767px) and (min-width: 768px) {
 
-    
-}
 @media (max-width:600px){
     .swiper-slide .img-box {
         width: 90px !important;
     }
     .swiper-slide-active .img-box {
-        width: 150px !important;
+        width: 160px !important;
     }
 }
 @media(max-width:991px) and (min-width:768px) {
