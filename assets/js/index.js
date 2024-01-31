@@ -36,20 +36,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Trigger the transition
     setTimeout(() => {
-      console.log("window .iner", window.innerWidth);
+
 
       if (window.innerWidth >= 768) {
         fullScreenLogo.style.top = "31%";
         fullScreenLogo.style.left = "4%";
         fullScreenLogo.style.width = "100px";
         fullScreenLogo.style.height = "100px";
-        console.log("If part called");
+   
       } else {
         fullScreenLogo.style.top = "26%";
         fullScreenLogo.style.left = "10%";
         fullScreenLogo.style.width = "100px";
         fullScreenLogo.style.height = "100px";
-        console.log("else part called");
+     
       }
     }, 0);
 
