@@ -525,7 +525,7 @@ input[type=number] {
         .main-title {
             color: var(--white);
             font-family: "DIN Next LT Pro";
-            font-size: 30px;
+            font-size: 35px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
@@ -536,7 +536,7 @@ input[type=number] {
             color:var(--white);
             text-align: center;
             font-family: "DIN Next LT Pro";
-            font-size: 17px;
+            font-size: 20px;
             font-style: normal;
             font-weight: 300;
             line-height: normal;
