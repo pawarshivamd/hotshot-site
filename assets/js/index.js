@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const HomePageContainer = document.querySelector(".home-page-container ");
   const FooterHome = document.querySelector(".footer-home-page-section ");
   const NavHomeUl = document.querySelector(".nav-home-ul ");
-
+  const BorderMove = document.querySelector(".boder-bottom-move");
   // Add click event listener to the logo
   navbarLogo.addEventListener("click", function () {
     // Calculate the position for the destination (navbar)
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     FooterHome.style.opacity = "1";
     NavHomeUl.style.opacity = "1";
     NavHomeUl.style.transform = "translateY(0px)";
-
+    BorderMove.style.borderBottom = "5px solid var(--theme-color)";
     // Trigger the transition
     setTimeout(() => {
 
@@ -165,4 +165,15 @@ document.addEventListener("DOMContentLoaded", function () {
   menuIcon.addEventListener("click", function () {
     listSection.classList.toggle("active");
   });
+});
+var swiper = new Swiper(".home-swiper", {
+  slidesPerView: 1,
+  // spaceBetween: 10,
+  // centeredSlides: true,
+  speed: 2000,
+  loop: true,
+  autoplay: {
+    delay: 1000,
+    // disableOnInteraction: false,
+  },
 });
