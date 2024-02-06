@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fullScreenLogo.style.left = `${destination.left}px`;
     fullScreenLogo.style.width = "200px";
     fullScreenLogo.style.height = "200px";
+    BorderMove.style.borderBottom = "5px solid var(--theme-color)";
     fullScreenLogo.style.transition =
       "top 0.5s, left 0.5s, width 0.5s, height 0.5s";
     // fullScreenLogo.style.transitionDelay = '5s';
@@ -33,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     FooterHome.style.opacity = "1";
     NavHomeUl.style.opacity = "1";
     NavHomeUl.style.transform = "translateY(0px)";
-    BorderMove.style.borderBottom = "5px solid var(--theme-color)";
     // Trigger the transition
     setTimeout(() => {
 

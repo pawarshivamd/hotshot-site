@@ -163,8 +163,9 @@ input[type=number] {
     position: relative;
     padding: 100px 50px 0px 50px;
     .boder-bottom-move{
-        border-bottom: 5px solid var(--theme-color);
+        /* border-bottom: 5px solid var(--theme-color); */
         animation: moveBorder 4s ease-in-out forwards;
+        animation-delay: 7s;
     }
     .list-section {
         padding-left: 150px;
