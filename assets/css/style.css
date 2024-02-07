@@ -262,7 +262,6 @@ input[type=number] {
     z-index: 9999;
     height: 100vh;
     cursor: auto;
-
     .logo-img {
         cursor: pointer;
         width: 500px;
@@ -305,7 +304,7 @@ input[type=number] {
     transition-delay: 2s;
     /* display: none; */
     transition: display 5s ease-in-out;
-
+    transition-duration: display 5s ease-in-out;
 }
 
 .footer-home-page-section {
@@ -360,6 +359,7 @@ input[type=number] {
     opacity: 0;
     transition-duration: all 5s ease-in-out;
     transition: all 5s ease-in-out;
+    
 
     .main-head-title {
         font-family: "DIN Next LT Pro";
@@ -433,6 +433,11 @@ input[type=number] {
          .main-text{
             font-weight: 700;
             font-size: 17px;
+            color: var(--black);
+            & a{
+                color: var(--black);
+                text-decoration: none;
+            }
          }
         } 
     }
