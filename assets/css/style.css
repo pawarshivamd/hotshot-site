@@ -314,7 +314,7 @@ input[type=number] {
 }
 
 
-.two-img-set-box {
+/* .two-img-set-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -350,7 +350,7 @@ input[type=number] {
             width: 500px;
         }
     }
-}
+} */
 
 
 /* -------------- home page section start ---------------- */

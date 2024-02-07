@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
     FooterHome.style.opacity = "1";
     NavHomeUl.style.opacity = "1";
     NavHomeUl.style.transform = "translateY(0px)";
-    HomePageContainer.style.display = "block";
     HomePageContainerBox.style.transform = "translateY(0px)";
     HomePageContainerBox.style.opacity = "1";
     HomePageSlider.style.transform = "translateY(0px)";
@@ -61,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
    
       } else {
         fullScreenLogo.style.top = "26%";
-        fullScreenLogo.style.left = "6%";
+        fullScreenLogo.style.left = "10%";
         fullScreenLogo.style.width = "100px";
         fullScreenLogo.style.height = "100px";
      
@@ -87,22 +86,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const LogoImg = document.querySelector(".logo-img");
 
   hotWhiteImg.addEventListener("mouseover", function () {
-    bgRedHotWhiteBox.style.backgroundColor = "White";
-
+    bgRedHotWhiteBox.style.backgroundColor = "transparent";
     bgRedHotWhiteBox.style.opacity = "0";
     LogoImg.style.zIndex = "1";
-
-    setTimeout(function () {
-    }, 3000);
   });
 
   hotWhiteImg.addEventListener("mouseout", function () {
-    // Reset the background color when the mouse leaves
     bgRedHotWhiteBox.style.backgroundColor = "var(--theme-color)";
     bgRedHotWhiteBox.style.opacity = "1";
     LogoImg.style.zIndex = "0";
-    setTimeout(function () {
-    }, 10);
   });
 });
 
@@ -178,6 +170,6 @@ var swiper = new Swiper(".home-swiper", {
   loop: true,
   autoplay: {
     delay: 1000,
-    disableOnInteraction: false,
+    // disableOnInteraction: false,
   },
 });
