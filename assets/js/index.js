@@ -14,21 +14,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // Calculate the position for the destination (navbar)
     const navbarRect = navbarLogo.getBoundingClientRect();
     const destination = {
-      top: navbarRect.top + window.scrollY + navbarRect.height / 1,
-      left: navbarRect.left + window.scrollX + navbarRect.width / 1,
+      top: navbarRect.top + window.scrollY + navbarRect.height / 4,
+      right: navbarRect.right + window.scrollX + navbarRect.width / 4,
     };
 
     // Apply styles for the transition
     // containerFluid.style.display = 'none';
     customContainer.style.maxWidth = "1320px";
     hotWhiteBox.style.display = "none";
-    fullScreenLogo.style.position = "absolute";
-    fullScreenLogo.style.top = `${destination.top}px`;
-    fullScreenLogo.style.left = `${destination.left}px`;
+    fullScreenLogo.style.position = "relative";
+    navbarLogo.style.top = `${destination.top}px`;
+    navbarLogo.style.left = `${destination.left}px`;
     fullScreenLogo.style.width = "200px";
     fullScreenLogo.style.height = "200px";
     BorderMove.style.borderBottom = "5px solid var(--theme-color)";
-    BorderMove.style.animation = "moveBorder 4s ease-in-out forwards"
+    BorderMove.style.animation = "moveBorder 4s ease-out forwards"
+    // BorderMove.style.animationDelay = "5s";
+
     BorderMove.style.opacity = "1";
     fullScreenLogo.style.transition =
       "top 0.5s, left 0.5s, width 0.5s, height 0.5s";
@@ -42,6 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
     HomePageContainerBox.style.opacity = "1";
     HomePageSlider.style.transform = "translateY(0px)";
     HomePageSlider.style.opacity = "1";
+    navbarLogo.style.position = "absolute";
+    navbarLogo.style.width = "126px";
+    navbarLogo.style.top = "-36px";
+    // navbarLogo.style.transition= "width all 5s ease-in-out";
     // Trigger the transition
     setTimeout(() => {
 
@@ -70,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // fullScreenLogo.style.transitionDuration = "5s";
       // fullScreenLogo.style.transitionDelay = "5s";
       // fullScreenLogo.style.display = 'none';
-      navbarLogo.style.opacity = "1";
     }, 7000); // Adjust the duration based on your CSS transition
   });
 });
@@ -81,20 +86,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const LogoImg = document.querySelector(".logo-img");
 
   hotWhiteImg.addEventListener("mouseover", function () {
-    bgRedHotWhiteBox.style.backgroundColor = "transparent";
+    bgRedHotWhiteBox.style.backgroundColor = "White";
+    
     bgRedHotWhiteBox.style.opacity = "0";
+    LogoImg.style.zIndex = "1";
+
     setTimeout(function () {
-      LogoImg.style.zIndex = "1";
-    }, 500);
+    }, 3000);
   });
 
   hotWhiteImg.addEventListener("mouseout", function () {
     // Reset the background color when the mouse leaves
     bgRedHotWhiteBox.style.backgroundColor = "var(--theme-color)";
     bgRedHotWhiteBox.style.opacity = "1";
+    LogoImg.style.zIndex = "0";
     setTimeout(function () {
-      LogoImg.style.zIndex = "0";
-    }, 1);
+    }, 10);
   });
 });
 
@@ -170,6 +177,6 @@ var swiper = new Swiper(".home-swiper", {
   loop: true,
   autoplay: {
     delay: 1000,
-    // disableOnInteraction: false,
+    disableOnInteraction: false,
   },
 });
