@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const hotWhiteBox = document.querySelector(".bg-red-hot-white-box");
   const customContainer = document.querySelector(".custom-container ");
   const HomePageContainer = document.querySelector(".home-page-container ");
+  const HomePageContainerBox = document.querySelector(".home-page-container .home-container-box");
+  const HomePageSlider = document.querySelector(".home-page-container .home-img-slider-section");
   const FooterHome = document.querySelector(".footer-home-page-section ");
   const NavHomeUl = document.querySelector(".nav-home-ul ");
   const BorderMove = document.querySelector(".boder-bottom-move");
@@ -26,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
     fullScreenLogo.style.width = "200px";
     fullScreenLogo.style.height = "200px";
     BorderMove.style.borderBottom = "5px solid var(--theme-color)";
+    BorderMove.style.animation = "moveBorder 4s ease-in-out forwards"
+    BorderMove.style.opacity = "1";
     fullScreenLogo.style.transition =
       "top 0.5s, left 0.5s, width 0.5s, height 0.5s";
     // fullScreenLogo.style.transitionDelay = '5s';
@@ -34,12 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
     FooterHome.style.opacity = "1";
     NavHomeUl.style.opacity = "1";
     NavHomeUl.style.transform = "translateY(0px)";
+    HomePageContainerBox.style.transform = "translateY(0px)";
+    HomePageContainerBox.style.opacity = "1";
+    HomePageSlider.style.transform = "translateY(0px)";
+    HomePageSlider.style.opacity = "1";
     // Trigger the transition
     setTimeout(() => {
 
 
       if (window.innerWidth >= 768) {
-        fullScreenLogo.style.top = "31%";
+        fullScreenLogo.style.top = "33%";
         fullScreenLogo.style.left = "4%";
         fullScreenLogo.style.width = "100px";
         fullScreenLogo.style.height = "100px";
@@ -58,9 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // After the transition, reset styles and show the navbar logo
     setTimeout(() => {
-      fullScreenLogo.style.transition = "5s";
-      fullScreenLogo.style.transitionDuration = "5s";
-      fullScreenLogo.style.transitionDelay = "5s";
+      // fullScreenLogo.style.transition = "5s";
+      // fullScreenLogo.style.transitionDuration = "5s";
+      // fullScreenLogo.style.transitionDelay = "5s";
       // fullScreenLogo.style.display = 'none';
       navbarLogo.style.opacity = "1";
     }, 7000); // Adjust the duration based on your CSS transition
@@ -106,12 +114,7 @@ var swiper = new Swiper(".mySwiper", {
   },
   on: {
     click: function () {
-      // Get the active slide index
-      var activeIndex = this.activeIndex;
-
-      // Check if the clicked slide is already active
-      if (activeIndex !== this.clickedIndex) {
-        // Navigate to the clicked slide
+      if (this.activeIndex !== this.clickedIndex) {
         this.slideTo(this.clickedIndex);
       }
     },
@@ -143,15 +146,10 @@ var swiper = new Swiper(".mySwiper", {
       productCard.classList.add("active");
     },
     slideChangeTransitionEnd: function () {
-      // Add classes to identify the next and previous slides
-      document
-        .querySelector(".swiper-slide-next")
-        .classList.add("swiper-slide-next");
-      document
-        .querySelector(".swiper-slide-prev")
-        .classList.add("swiper-slide-prev");
-
-      // productCard.classList.add('slide-bottom');
+     // Add classes to identify the next and previous slides
+  document.querySelector(".swiper-slide-next").classList.add("swiper-slide-next");
+  document.querySelector(".swiper-slide-prev").classList.add("swiper-slide-prev");
+  // Removed the commented out line as it was not necessary
     },
   },
 });
@@ -168,8 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 var swiper = new Swiper(".home-swiper", {
   slidesPerView: 1,
-  // spaceBetween: 10,
-  // centeredSlides: true,
   speed: 2000,
   loop: true,
   autoplay: {
