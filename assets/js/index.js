@@ -114,6 +114,9 @@ var swiper = new Swiper(".mySwiper", {
   centeredSlides: true,
   speed: 2000,
   Delay: 9000,
+  freeMode: false,
+   disableOnInteraction: false,
+    autoplayDisableOnInteraction: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -181,5 +184,6 @@ var swiper = new Swiper(".home-swiper", {
   autoplay: {
     delay: 1000,
     // disableOnInteraction: false,
+    // autoplayDisableOnInteraction: false,
   },
 });
