@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     BorderMove.style.opacity = "1";
     fullScreenLogo.style.transition =
-      "top 0.5s, left 0.5s, width 0.5s, height 0.5s";
+      "top 8s, right 5s, width 5s, height 5s";
     // fullScreenLogo.style.transitionDelay = '5s';
     fullScreenLogo.style.transitionDuration = "2s";
     HomePageContainer.style.opacity = "1";

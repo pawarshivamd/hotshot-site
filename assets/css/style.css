@@ -168,10 +168,8 @@ input[type=number] {
         /* border-bottom: 5px solid var(--theme-color); */
         /* animation: moveBorder 4s ease-in-out forwards; */
         opacity: 0;
-        transition:opacity 7s ease-in-out;
-        transition-delay: opacity 10s ease-in-out;
-        /* transition-duration: all 5s ease-in-out; */
-        /* animation-delay: 11s; */
+        transition:opacity 2s ease;
+        transition-delay:2s;
     }
     .list-section {
         /* width: 100%; */
@@ -265,7 +263,7 @@ input[type=number] {
     .logo-img {
         cursor: pointer;
         width: 500px;
-        transition: all 0.5s ease-in-out;
+         transition: top 2s ease-in-out, right 2s ease-in-out, width 2s ease-in-out, height 2s ease-in-out;
         
     }   
 
@@ -307,9 +305,6 @@ input[type=number] {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     transition-delay: 2s;
-    /* display: none; */
-    transition: display 5s ease-in-out;
-    transition-duration: display 5s ease-in-out;
 }
 
 .footer-home-page-section {
@@ -361,7 +356,7 @@ input[type=number] {
 
 /* -------------- home page section start ---------------- */
 .home-container-box {
-    transform: translateY(100px);
+    transform: translateY(50px);
     opacity: 0;
     transition-duration: all 5s ease-in-out;
     transition: all 5s ease-in-out;
@@ -398,7 +393,7 @@ input[type=number] {
     }
 }
 .home-img-slider-section{
-    transform: translateY(100px);
+    transform: translateY(50px);
     opacity: 0;
     transition-duration: all 5s ease-in-out;
     transition: all 5s ease-in-out;
@@ -463,17 +458,17 @@ input[type=number] {
     }
 
     .footer-text {
-        color: #FFF;
-        font-family: Inter;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 40px;
-        /* 166.667% */
-        letter-spacing: 0.48px;
-        margin-right: 10px;
+ 
         margin-bottom: 0;
         a{
+            font-family: Inter;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            /* 166.667% */
+            letter-spacing: 0.48px;
+            margin-right: 10px;
             text-decoration: none;
             color: #FFF;
         }
