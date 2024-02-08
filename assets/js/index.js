@@ -4,8 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const hotWhiteBox = document.querySelector(".bg-red-hot-white-box");
   const customContainer = document.querySelector(".custom-container ");
   const HomePageContainer = document.querySelector(".home-page-container ");
-  const HomePageContainerBox = document.querySelector(".home-page-container .home-container-box");
-  const HomePageSlider = document.querySelector(".home-page-container .home-img-slider-section");
+  const HomePageContainerBox = document.querySelector(
+    ".home-page-container .home-container-box"
+  );
+  const HomePageSlider = document.querySelector(
+    ".home-page-container .home-img-slider-section"
+  );
   const FooterHome = document.querySelector(".footer-home-page-section ");
   const NavHomeUl = document.querySelector(".nav-home-ul ");
   const BorderMove = document.querySelector(".boder-bottom-move");
@@ -21,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Apply styles for the transition
     // containerFluid.style.display = 'none';
-    HomeBody_.style.backgroundColor="var(--white)"
+    HomeBody_.style.backgroundColor = "var(--white)";
     customContainer.style.maxWidth = "1320px";
     hotWhiteBox.style.display = "none";
     fullScreenLogo.style.position = "relative";
@@ -30,12 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
     fullScreenLogo.style.width = "100px";
     fullScreenLogo.style.height = "100px";
     BorderMove.style.borderBottom = "5px solid var(--theme-color)";
-    BorderMove.style.animation = "moveBorder 4s ease-out forwards"
+    BorderMove.style.animation = "moveBorder 4s ease-out forwards";
     // BorderMove.style.animationDelay = "5s";
 
     BorderMove.style.opacity = "1";
-    fullScreenLogo.style.transition =
-      "top 8s, right 5s, width 5s, height 5s";
+    fullScreenLogo.style.transition = "top 8s, right 5s, width 5s, height 5s";
     // fullScreenLogo.style.transitionDelay = '5s';
     fullScreenLogo.style.transitionDuration = "2s";
     HomePageContainer.style.opacity = "1";
@@ -53,14 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // navbarLogo.style.transition= "width all 5s ease-in-out";
     // Trigger the transition
     setTimeout(() => {
-
-
       if (window.innerWidth >= 768) {
         fullScreenLogo.style.top = "33%";
         // fullScreenLogo.style.left = "4%";
         fullScreenLogo.style.width = "100px";
         fullScreenLogo.style.height = "100px";
-   
       } else {
         fullScreenLogo.style.top = "26%";
         // fullScreenLogo.style.left = "10%";
@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
     bgRedHotWhiteBox.style.opacity = "0";
     LogoImg.style.zIndex = "1";
     HomeBody.style.backgroundColor = "var(--white)";
-    
   });
   LogoImg.addEventListener("mouseout", function () {
     bgRedHotWhiteBox.style.backgroundColor = "var(--theme-color)";
@@ -115,8 +114,8 @@ var swiper = new Swiper(".mySwiper", {
   speed: 2000,
   Delay: 9000,
   freeMode: false,
-   disableOnInteraction: false,
-    autoplayDisableOnInteraction: false,
+  disableOnInteraction: false,
+  autoplayDisableOnInteraction: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -159,10 +158,14 @@ var swiper = new Swiper(".mySwiper", {
       productCard.classList.add("active");
     },
     slideChangeTransitionEnd: function () {
-     // Add classes to identify the next and previous slides
-  document.querySelector(".swiper-slide-next").classList.add("swiper-slide-next");
-  document.querySelector(".swiper-slide-prev").classList.add("swiper-slide-prev");
-  // Removed the commented out line as it was not necessary
+      // Add classes to identify the next and previous slides
+      document
+        .querySelector(".swiper-slide-next")
+        .classList.add("swiper-slide-next");
+      document
+        .querySelector(".swiper-slide-prev")
+        .classList.add("swiper-slide-prev");
+      // Removed the commented out line as it was not necessary
     },
   },
 });

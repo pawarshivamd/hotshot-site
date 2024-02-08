@@ -1,5 +1,6 @@
 @import url(../Fonts/transfonter.org-20231027-125649/stylesheet.css);
 @import url(../Fonts/Inter/stylesheet.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -43,14 +44,15 @@ input[type=number] {
     width: 100%;
     height: 100vh;
     z-index: 0;
-    .logo-bg-set{
+
+    .logo-bg-set {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50% , -50%);
+        transform: translate(-50%, -50%);
         width: 500px;
         filter: blur(8px);
-        -webkit-filter: blur(8px); 
+        -webkit-filter: blur(8px);
     }
 }
 
@@ -105,6 +107,7 @@ input[type=number] {
                 appearance: none;
                 padding: 5px 5px;
                 color: var(--theme-color);
+
                 &::placeholder {
                     color: var(--theme-color);
                 }
@@ -164,27 +167,32 @@ input[type=number] {
     padding: 100px 50px 0px 50px;
     display: flex;
     align-items: center;
-    .boder-bottom-move{
+
+    .boder-bottom-move {
         /* border-bottom: 5px solid var(--theme-color); */
         /* animation: moveBorder 4s ease-in-out forwards; */
         opacity: 0;
-        transition:opacity 2s ease-out;
-        transition-delay:2s;
-        -webkit-transition:opacity 2s ease-out ;
-        -webkit-transition-delay:2s;
+        transition: opacity 2s ease-out;
+        transition-delay: 2s;
+        -webkit-transition: opacity 2s ease-out;
+        -webkit-transition-delay: 2s;
 
     }
+
     .list-section {
         /* width: 100%; */
         opacity: 0;
+
         .list-group-nav-ul {
-            padding-left: 60px !important ;
+            padding-left: 60px !important;
             display: flex;
             align-items: center;
             padding: 5px 20px;
             flex-wrap: nowrap;
+
             .nav-item {
                 margin-inline: 40px;
+
                 .nav-link {
                     color: var(--theme-color);
                     font-family: "DIN Next LT Pro";
@@ -222,7 +230,7 @@ input[type=number] {
     .list-section {
         border-bottom: 5px solid var(--theme-color);
         width: 100%;
-        
+
         .list-group-nav-ul {
             display: flex;
             padding-left: 150px;
@@ -230,6 +238,7 @@ input[type=number] {
             padding: 5px 20px;
             flex-wrap: wrap;
             padding-left: 150px;
+
             .nav-item {
                 margin-inline: 40px;
 
@@ -263,13 +272,14 @@ input[type=number] {
     z-index: 9999;
     height: 100vh;
     cursor: auto;
+
     .logo-img {
         cursor: pointer;
         width: 500px;
-         transition: top 2s ease-in-out, right 2s ease-in-out, width 2s ease-in-out, height 2s ease-in-out;
-         -webkit-transition: top 2s ease-in-out, right 2s ease-in-out, width 2s ease-in-out, height 2s ease-in-out;
-        
-    }   
+        transition: top 2s ease-in-out, right 2s ease-in-out, width 2s ease-in-out, height 2s ease-in-out;
+        -webkit-transition: top 2s ease-in-out, right 2s ease-in-out, width 2s ease-in-out, height 2s ease-in-out;
+
+    }
 
     .bg-red-hot-white-box {
         background-color: var(--theme-color);
@@ -282,6 +292,7 @@ input[type=number] {
         opacity: 1;
         transition: opacity 2s ease;
         -webkit-transition: opacity 2s ease;
+
         .hot-white-img {
             cursor: pointer;
             width: 500px;
@@ -291,10 +302,12 @@ input[type=number] {
         }
     }
 }
-.home-body{
-    background-color:var(--theme-color);
+
+.home-body {
+    background-color: var(--theme-color);
 
 }
+
 .nav-home-ul {
     opacity: 0;
     transition: all 0.5s ease-in-out;
@@ -333,7 +346,8 @@ input[type=number] {
     transition-duration: all 5s ease-in-out;
     -webkit-transition-duration: all 2s cubic-bezier(0.34, 1.56, 0.64, 1);
     -webkit-transition: all 5s ease-in-out;
-    
+
+
 
     .main-head-title {
         font-family: "DIN Next LT Pro";
@@ -355,7 +369,8 @@ input[type=number] {
         /* 36.891px */
         text-transform: uppercase;
     }
-    .sub-text-color{
+
+    .sub-text-color {
         color: var(--theme-color);
         font-family: "DIN Next LT Pro";
         font-size: 17.284px;
@@ -365,57 +380,65 @@ input[type=number] {
         text-transform: uppercase;
     }
 }
-.home-img-slider-section{
+
+.home-img-slider-section {
     transform: translateY(50px);
     opacity: 0;
     transition-duration: all 5s ease-in-out;
     transition: all 5s ease-in-out;
     -webkit-transition-duration: all 5s ease-in-out;
     -webkit-transition: all 5s ease-in-out;
-        margin-top: 110px;
-        .home-swiper{
-          .swiper-wrapper{
-              .swiper-slide{
+    margin-top: 110px;
+
+    .home-swiper {
+        .swiper-wrapper {
+            .swiper-slide {
                 justify-content: center;
                 display: flex;
-                .home-img{
-                      box-shadow: 0px 4px 4px 0px #00000040;
+
+                .home-img {
+                    box-shadow: 0px 4px 4px 0px #00000040;
+                }
             }
-           } 
-          }  
         }
+    }
 }
 
 /* -------------- home page section End ---------------------- */
 
 .contact-us-section {
-    .contact-main-box{
+    .contact-main-box {
         margin: 100px auto;
-        width: min(100% - 0px , 500px);
-        .contact-card{
-         display: flex;
-         justify-content: center;
-         flex-direction: column;
-         align-items: center;
-         .social-box{
-            width: 70px;
-            height: 70px;
+        width: min(100% - 0px, 500px);
+
+        .contact-card {
             display: flex;
             justify-content: center;
-            .img-social{
-               width: 50px;
+            flex-direction: column;
+            align-items: center;
+
+            .social-box {
+                width: 70px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+
+                .img-social {
+                    width: 50px;
+                }
             }
-         }
-         .main-text{
-            font-weight: 700;
-            font-size: 17px;
-            color: var(--black);
-            & a{
+
+            .main-text {
+                font-weight: 700;
+                font-size: 17px;
                 color: var(--black);
-                text-decoration: none;
+
+                & a {
+                    color: var(--black);
+                    text-decoration: none;
+                }
             }
-         }
-        } 
+        }
     }
 }
 
@@ -434,7 +457,8 @@ input[type=number] {
 
     .footer-text {
         margin-bottom: 0;
-        .footer-link{
+
+        .footer-link {
             font-family: Inter;
             font-size: 17px;
             font-style: normal;
@@ -500,9 +524,10 @@ input[type=number] {
         }
     }
 }
-.swiper-slide-prev{
-    .img-box{
-        margin-left:-70px ;
+
+.swiper-slide-prev {
+    .img-box {
+        margin-left: -70px;
         transition: all 0.5s elease-in-out;
         transition-duration: all 0.5s ease-in-out;
         -webkit-transition: all 0.5s elease-in-out;
@@ -510,9 +535,10 @@ input[type=number] {
         cursor: pointer;
     }
 }
-.swiper-slide-next{
-    .img-box{
-        margin-right:-70px ;
+
+.swiper-slide-next {
+    .img-box {
+        margin-right: -70px;
         transition: all 0.5s elease-in-out;
         transition-duration: all 0.5s ease-in-out;
         -webkit-transition: all 0.5s elease-in-out;
@@ -520,21 +546,19 @@ input[type=number] {
         cursor: pointer;
     }
 }
+
 .swiper-slide-active {
-    /* transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); */
-    /* -webkit-transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); */
     .img-box {
         width: 500px !important;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-inline: auto;
-        transition: all 2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-        transition-duration: 1s;
-        transition-delay: 1s;
-        -webkit-transition: all 2s  cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-        -webkit-transition-duration: 1s;
-        -webkit-transition-delay: 1s;
+        transition-timing-function: cubic-bezier(0.45, 1.45, 0.8, 1) !important;
+        transition: all 2s cubic-bezier(0.45, 1.45, 0.8, 1) !important;
+        animation-timing-function: all 2s cubic-bezier(0.45, 1.45, 0.8, 1) !important;
+        animation-duration: 1000ms;
+        animation-timing-function: cubic-bezier(0.45, 1.45, 0.8, 1);
 
         & img {
             width: 100%;
@@ -544,16 +568,14 @@ input[type=number] {
 
 .swiper-slide-next,
 .swiper-slide-prev {
-
-    /* Animation when slide leaves */
     .img-box {
         width: 300px !important;
-        transition: all 2s ease-out !important;
-        transition-duration:all 1s ease-in-out;
-        transition-delay: 1s;
-        -webkit-transition: all 2s ease-out !important;
-        -webkit-transition-duration:all 1s ease-in-out;
-        -webkit-transition-delay: 1s;
+        transition: all 2s cubic-bezier(0.45, 1.45, 0.8, 1) !important;
+        transition-duration: 1000ms;
+        transition-delay: 1000ms;
+        -webkit-transition: all 2s cubic-bezier(0.45, 1.45, 0.8, 1) !important;
+        -webkit-transition-duration: 1000ms;
+        -webkit-transition-delay: 1000ms;
     }
 }
 
@@ -568,6 +590,7 @@ input[type=number] {
     overflow: hidden;
     scroll-behavior: smooth;
     margin-top: 20px;
+
     .products-card.active {
         opacity: 1;
     }
@@ -596,7 +619,7 @@ input[type=number] {
         }
 
         .sub-text {
-            color:var(--white);
+            color: var(--white);
             text-align: center;
             font-family: "DIN Next LT Pro";
             font-size: 20px;
@@ -619,19 +642,17 @@ input[type=number] {
 
 }
 
-@media (max-width: 1024px) {
-
-}
-
 @media (max-width:768px) {
     .loging-card {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 346px;
-        .form-section{
+
+        .form-section {
             padding: 20px 0;
-        } 
+        }
     }
+
     .navbar-section .nav-img-box {
         left: 10%;
     }
@@ -674,6 +695,7 @@ input[type=number] {
             flex-direction: column;
             z-index: 9999;
             padding-left: 0 !important;
+
             .nav-link {
                 color: var(--white) !important;
             }
@@ -708,6 +730,7 @@ input[type=number] {
             flex-direction: column;
             z-index: 9999;
             padding-left: 0 !important;
+
             .nav-link {
                 color: var(--white) !important;
             }
@@ -724,14 +747,16 @@ input[type=number] {
     .products-section {
         height: 350px;
     }
-    .products-description-box .products-card{
-        .main-title{
+
+    .products-description-box .products-card {
+        .main-title {
             font-size: 22px;
         }
-        .sub-text{
-        font-size: 12px;
+
+        .sub-text {
+            font-size: 12px;
+        }
     }
-    } 
 
 
     /* -------------- home page section start ---------------- */
@@ -750,64 +775,76 @@ input[type=number] {
     .footer-section .footer-logo {
         width: 70px;
     }
-    .set-footer-bottom{
+
+    .set-footer-bottom {
         position: absolute;
         bottom: 0;
         width: 100%;
     }
 }
 
-@media (max-width:600px){
+@media (max-width:600px) {
     .swiper-slide .img-box {
         width: 100px !important;
         transition: all 0.5s elease-in-out;
-            -webkit-transition: all 0.5s elease-in-out;
+        -webkit-transition: all 0.5s elease-in-out;
     }
+
     .swiper-slide-active .img-box {
         width: 180px !important;
     }
-    .swiper-slide-prev{
+
+    .swiper-slide-prev {
         transition: all 0.5s elease-in-out;
-            -webkit-transition: all 0.5s elease-in-out;
-        .img-box{
-            margin-left:0px ;
+        -webkit-transition: all 0.5s elease-in-out;
+
+        .img-box {
+            margin-left: 0px;
             transition: all 0.5s elease-in-out;
             -webkit-transition: all 0.5s elease-in-out;
-            
+
         }
     }
-    .swiper-slide-next{
+
+    .swiper-slide-next {
         transition: all 0.5s elease-in-out;
-            -webkit-transition: all 0.5s elease-in-out;
-        .img-box{
-            margin-right:0px ;
+        -webkit-transition: all 0.5s elease-in-out;
+
+        .img-box {
+            margin-right: 0px;
             transition: all 0.5s elease-in-out;
             -webkit-transition: all 0.5s elease-in-out;
         }
     }
 }
+
 @media(max-width:991px) and (min-width:768px) {
- .products-section {
+    .products-section {
         height: 450px;
     }
+
     .swiper-slide .img-box {
         width: 180px !important;
     }
+
     .swiper-slide-active .img-box {
         width: 300px !important;
     }
-    .swiper-slide-prev{
-        .img-box{
-            margin-left:-30px ;
-            
+
+    .swiper-slide-prev {
+        .img-box {
+            margin-left: -30px;
+
         }
     }
-    .swiper-slide-next{
-        .img-box{
-            margin-right:-30px ;
+
+    .swiper-slide-next {
+        .img-box {
+            margin-right: -30px;
         }
     }
-    .set-footer-bottom{
+
+    .set-footer-bottom {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -815,16 +852,18 @@ input[type=number] {
 }
 
 
-@media (max-width:1024px) and (min-width:1024px)    {
+@media (max-width:1024px) and (min-width:1024px) {
     /* .products-section {
         height: 450px;
     } */
 }
-@media (max-width:820px )and (min-width:820px)  {
+
+@media (max-width:820px)and (min-width:820px) {
     /* .products-section {
         height: 450px;
     } */
 }
+
 @media (min-width: 1400px) {
 
     .custom-container-product {
@@ -847,25 +886,17 @@ input[type=number] {
         transform: translateY(-100px);
     }
 }
+
 @keyframes moveBorder {
     0% {
         width: 0%;
     }
-    50%{
+
+    50% {
         width: 0%;
     }
+
     100% {
         width: 100%;
     }
 }
-@media (orientation: landscape) {
-    body {
-      flex-direction: row;
-    }
-  } 
-  @media (min-width: 768px) and (orientation: landscape) {
-    
-    body {
-      flex-direction: row;
-    }
-  }
