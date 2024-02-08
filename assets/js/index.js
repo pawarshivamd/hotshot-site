@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const FooterHome = document.querySelector(".footer-home-page-section ");
   const NavHomeUl = document.querySelector(".nav-home-ul ");
   const BorderMove = document.querySelector(".boder-bottom-move");
+  const HomeBody_ = document.querySelector(".home-body");
   // Add click event listener to the logo
   navbarLogo.addEventListener("click", function () {
     // Calculate the position for the destination (navbar)
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Apply styles for the transition
     // containerFluid.style.display = 'none';
+    HomeBody_.style.backgroundColor="var(--white)"
     customContainer.style.maxWidth = "1320px";
     hotWhiteBox.style.display = "none";
     fullScreenLogo.style.position = "relative";
@@ -84,14 +86,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const hotWhiteImg = document.querySelector(".hot-white-img");
   const bgRedHotWhiteBox = document.querySelector(".bg-red-hot-white-box");
   const LogoImg = document.querySelector(".logo-img");
+  const HomeBody = document.querySelector(".home-body");
 
   hotWhiteImg.addEventListener("mouseover", function () {
     bgRedHotWhiteBox.style.backgroundColor = "var(--theme-color)";
     bgRedHotWhiteBox.style.opacity = "0";
     LogoImg.style.zIndex = "1";
+    HomeBody.style.backgroundColor = "var(--white)";
+    
   });
   LogoImg.addEventListener("mouseout", function () {
     bgRedHotWhiteBox.style.backgroundColor = "var(--theme-color)";
+    // HomeBody.style.backgroundColor = "var(--theme-color)";
     bgRedHotWhiteBox.style.opacity = "1";
     LogoImg.style.zIndex = "0";
   });
