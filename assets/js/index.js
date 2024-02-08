@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Calculate the position for the destination (navbar)
     const navbarRect = navbarLogo.getBoundingClientRect();
     const destination = {
-      top: navbarRect.top + window.scrollY + navbarRect.height / 4,
-      right: navbarRect.right + window.scrollX + navbarRect.width / 4,
+      top: navbarRect.top + window.scrollY + navbarRect.height / 1,
+      right: navbarRect.right + window.scrollX + navbarRect.width / 1,
     };
 
     // Apply styles for the transition
@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     fullScreenLogo.style.position = "relative";
     navbarLogo.style.top = `${destination.top}px`;
     navbarLogo.style.left = `${destination.left}px`;
-    fullScreenLogo.style.width = "200px";
-    fullScreenLogo.style.height = "200px";
+    fullScreenLogo.style.width = "100px";
+    fullScreenLogo.style.height = "100px";
     BorderMove.style.borderBottom = "5px solid var(--theme-color)";
     BorderMove.style.animation = "moveBorder 4s ease-out forwards"
     // BorderMove.style.animationDelay = "5s";
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fullScreenLogo.style.transitionDuration = "2s";
     HomePageContainer.style.opacity = "1";
     FooterHome.style.opacity = "1";
+    FooterHome.style.display = "block";
     NavHomeUl.style.opacity = "1";
     NavHomeUl.style.transform = "translateY(0px)";
     HomePageContainerBox.style.transform = "translateY(0px)";
@@ -54,18 +55,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (window.innerWidth >= 768) {
         fullScreenLogo.style.top = "33%";
-        fullScreenLogo.style.left = "4%";
+        // fullScreenLogo.style.left = "4%";
         fullScreenLogo.style.width = "100px";
         fullScreenLogo.style.height = "100px";
    
       } else {
         fullScreenLogo.style.top = "26%";
-        fullScreenLogo.style.left = "10%";
+        // fullScreenLogo.style.left = "10%";
         fullScreenLogo.style.width = "100px";
         fullScreenLogo.style.height = "100px";
-     
       }
-    }, 0);
+    }, 5000);
 
     // Hide the navbar logo temporarily during the transition
     navbarLogo.style.opacity = "1";
@@ -86,16 +86,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const LogoImg = document.querySelector(".logo-img");
 
   hotWhiteImg.addEventListener("mouseover", function () {
-    bgRedHotWhiteBox.style.backgroundColor = "transparent";
+    bgRedHotWhiteBox.style.backgroundColor = "var(--theme-color)";
     bgRedHotWhiteBox.style.opacity = "0";
     LogoImg.style.zIndex = "1";
   });
-
-  hotWhiteImg.addEventListener("mouseout", function () {
+  LogoImg.addEventListener("mouseout", function () {
     bgRedHotWhiteBox.style.backgroundColor = "var(--theme-color)";
     bgRedHotWhiteBox.style.opacity = "1";
     LogoImg.style.zIndex = "0";
   });
+  // hotWhiteImg.addEventListener("mouseout", function () {
+  //   bgRedHotWhiteBox.style.backgroundColor = "var(--theme-color)";
+  //   bgRedHotWhiteBox.style.opacity = "1";
+  //   LogoImg.style.zIndex = "0";
+  // });
 });
 
 var swiper = new Swiper(".mySwiper", {

@@ -177,11 +177,11 @@ input[type=number] {
         /* width: 100%; */
         opacity: 0;
         .list-group-nav-ul {
-            padding-left: 150px !important ;
+            padding-left: 60px !important ;
             display: flex;
             align-items: center;
             padding: 5px 20px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
 
             .nav-item {
                 margin-inline: 40px;
@@ -276,7 +276,7 @@ input[type=number] {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 150vh;
+        height: 160vh;
         opacity: 1;
         transition: opacity 2s ease;
         .hot-white-img {
@@ -288,7 +288,12 @@ input[type=number] {
         }
     }
 }
+.home-body{
+    /* overflow-x: hidden;
+    height: 100vh;
+    background-color: #000000; */
 
+}
 .nav-home-ul {
     opacity: 0;
     transition: all 0.5s ease-in-out;
@@ -311,6 +316,7 @@ input[type=number] {
     opacity: 0;
     transition: all 0.5s ease-in-out;
     transition-delay: 2s;
+    display: none;
 }
 
 
